@@ -2,7 +2,7 @@ pipeline{
 	agent any
 
 		parameters{
-			String(mensaje:'Ejecucion de pipeline: ')
+			String(name:'mensaje', description:'Ejecucion de pipeline: ')
 		}
 		tools{
 			gradle 'gradle-7.6'
@@ -11,6 +11,7 @@ pipeline{
 			stage('runHolamundo'){
 				steps{
 					sh 'echo ${mensaje}'
+					sh 'gradle -q Holamundo'
 				}
 			}
 		}
