@@ -2,7 +2,7 @@ pipeline{
 	agent any
 
 		parameters{
-			String(name:'mensaje', description:'Ejecucion de pipeline: ')
+			string(name:'mensaje', description:'Ejecucion de pipeline: ')
 		}
 		tools{
 			gradle 'gradle-7.6'
