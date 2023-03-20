@@ -1,12 +1,18 @@
 pipeline{
 	agent any
+
 		parameters{
 			String(mensaje:'Ejecucion de pipeline: ')
 		}
-			stages{
-				stage('runHolamundo'){
-					steps{
-						sh 'echo ${mensaje}'
-					}
+		tools{
+			gradle 'gradle-7.6'
+		}
+		stages{
+			stage('runHolamundo'){
+				steps{
+					sh 'echo ${mensaje}'
+				}
 			}
+		}
+
 }
