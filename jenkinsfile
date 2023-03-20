@@ -1,0 +1,12 @@
+pipeline{
+	agent any
+		parameters{
+			String(mensaje:'Ejecucion de pipeline: ')
+		}
+			stages{
+				stage('runHolamundo'){
+					steps{
+						sh 'echo ${mensaje}'
+					}
+			}
+}
