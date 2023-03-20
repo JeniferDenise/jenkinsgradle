@@ -10,8 +10,8 @@ pipeline{
 		stages{
 			stage('runHolamundo'){
 				steps{
-					sh 'echo ${mensaje}'
-					sh 'gradle -q Holamundo'
+					echo mensaje
+					sh 'gradle -q runHolamundo'
 				}
 			}
 		}

@@ -18,7 +18,6 @@ test {
     useJUnitPlatform()
 }
 task runHolamundo(type: JavaExec ) {
-    main = 'Holamundo'
     classpath = sourceSets.main.runtimeClasspath
-    //C:\Users\jenifer.espeche\Desktop\Trabajando con Diego\Tareagradle\src\main\java
+    main = 'Holamundo'
 }
