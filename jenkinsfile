@@ -2,7 +2,7 @@ pipeline{
 	agent any
 
 		parameters{
-			string(name:'mensaje', description:'Ejecucion de pipeline: ')
+			string(name:'tag', description:'tag para ejecución de tarea gradle: ')
 		}
 		tools{
 			gradle 'gradle-7.6'
@@ -10,8 +10,7 @@ pipeline{
 		stages{
 			stage('runHolamundo'){
 				steps{
-					echo mensaje
-					sh 'gradle -q runHolamundo'
+					sh 'gradle -q runWhitCucumber -P tags=${tag}'
 				}
 			}
 		}
