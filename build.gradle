@@ -38,5 +38,6 @@ task runWithCucumber(type: JavaExec ) {
     args = [
             '--glue', 'steps',
             'src/test/resources/features',
-            '--tags', "${tags}" ]
+            '--tags', "${tags}"
+    ]
 }
