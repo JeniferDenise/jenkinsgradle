@@ -10,7 +10,7 @@ pipeline{
 		stages{
 			stage('runHolamundo'){
 				steps{
-					sh 'gradle -q runWhitCucumber -P tags=${tag}'
+					sh 'gradle -q runWithCucumber -P tags=${tag}'
 				}
 			}
 		}
